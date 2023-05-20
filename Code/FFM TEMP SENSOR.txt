@@ -1,0 +1,22 @@
+void setup()
+{
+  pinMode(A1, INPUT);
+  Serial.begin(9600);
+
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+
+  double tempx = -40 + 0.878679 * (analogRead(A1) - 20);
+  Serial.print("Temp F:");
+  Serial.println(tempx);
+  //Serial.println(analogRead(A1));
+  delay(1000); // Wait for 1000 millisecond(s)
+  
+  Serial.println(analogRead(A0));
+  delay(1000); // Wait for 1000 millisecond(s)
+  
+}
